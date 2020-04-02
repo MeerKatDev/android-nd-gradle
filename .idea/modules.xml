@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GradleFinalProject.iml" filepath="$PROJECT_DIR$/GradleFinalProject.iml" group="GradleFinalProject" />
+      <module fileurl="file://$PROJECT_DIR$/andylib/andylib.iml" filepath="$PROJECT_DIR$/andylib/andylib.iml" group="GradleFinalProject/andylib" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="GradleFinalProject/app" />
       <module fileurl="file://$PROJECT_DIR$/backend/backend.iml" filepath="$PROJECT_DIR$/backend/backend.iml" group="GradleFinalProject/backend" />
+      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" group="GradleFinalProject/lib" />
     </modules>
   </component>
 </project>
