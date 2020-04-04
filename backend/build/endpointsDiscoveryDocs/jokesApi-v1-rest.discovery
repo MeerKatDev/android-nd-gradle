@@ -9,7 +9,7 @@
   }
  },
  "basePath": "/_ah/api/jokesApi/v1/",
- "baseUrl": "https://myApplicationId.appspot.com/_ah/api/jokesApi/v1/",
+ "baseUrl": "https://myapi.appspot.com/_ah/api/jokesApi/v1/",
  "batchPath": "batch",
  "description": "This is an API",
  "discoveryVersion": "v1",
@@ -85,7 +85,7 @@
   }
  },
  "protocol": "rest",
- "rootUrl": "https://myApplicationId.appspot.com/_ah/api/",
+ "rootUrl": "https://myapi.appspot.com/_ah/api/",
  "schemas": {
   "JokeBean": {
    "id": "JokeBean",

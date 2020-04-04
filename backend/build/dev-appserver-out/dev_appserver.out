@@ -1,0 +1,16 @@
+Apr 04, 2020 5:06:41 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+INFO: Overwriting system property key 'java.util.logging.config.file', value '/Users/pro/Library/Application Support/google-cloud-tools-java/managed-cloud-sdk/LATEST/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/config/sdk/logging.properties' with value 'WEB-INF/logging.properties' from '/Users/pro/Documents/Nanodegree/GradleFinalProject/backend/build/exploded-backend/WEB-INF/appengine-web.xml'
+2020-04-04 17:06:41.858:INFO::main: Logging initialized @744ms to org.eclipse.jetty.util.log.StdErrLog
+2020-04-04 17:06:41.928:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
+2020-04-04 17:06:42.413:INFO:oejs.Server:main: jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 1.8.0_212-release-1586-b4-5784211
+2020-04-04 17:06:42.820:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@8458f04{/,file:///Users/pro/Documents/Nanodegree/GradleFinalProject/backend/build/exploded-backend/,AVAILABLE}{/Users/pro/Documents/Nanodegree/GradleFinalProject/backend/build/exploded-backend}
+2020-04-04 17:06:42.820:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
+2020-04-04 17:06:42.821:INFO:oejs.session:main: node0 Scavenging disabled
+2020-04-04 17:06:42.834:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@1d16f93d{HTTP/1.1, (http/1.1)}{localhost:8080}
+2020-04-04 17:06:42.855:INFO:oejs.Server:main: Started @1741ms
+Apr 04, 2020 3:06:42 PM com.google.appengine.tools.development.AbstractModule startup
+INFO: Module instance default is running at http://localhost:8080/
+Apr 04, 2020 3:06:42 PM com.google.appengine.tools.development.AbstractModule startup
+INFO: The admin console is running at http://localhost:8080/_ah/admin
+Apr 04, 2020 5:06:42 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+INFO: Dev App Server is now running
