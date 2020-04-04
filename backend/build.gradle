@@ -23,6 +23,7 @@ repositories {
 
 apply plugin: 'java'
 apply plugin: 'war'
+
 apply plugin: 'com.google.cloud.tools.appengine'
 apply plugin: 'com.google.cloud.tools.endpoints-framework-server'
 
@@ -32,6 +33,23 @@ dependencies {
     implementation 'javax.inject:javax.inject:1'
 
     implementation 'javax.servlet:servlet-api:2.5'
-    implementation 'com.google.api-client:google-api-client:1.30.0'
+    implementation 'com.google.api-client:google-api-client:1.30.9'
     implementation 'com.google.http-client:google-http-client-android:1.23.0'
+}
+
+
+// V2: Define deployment configuration using the new App Engine plugin
+// with the appengine closure
+appengine {  // App Engine tasks configuration
+    deploy {   // deploy configuration
+
+        // The following is used for acceptance tests and
+        // is not required for a migration.
+        projectId = findProperty("appengine.deploy.project")
+        version = findProperty("appengine.deploy.version")
+        def promoteProp = findProperty("appengine.deploy.promote")
+        if (promoteProp != null) {
+            promote = new Boolean(promoteProp)
+        }
+    }
 }
