@@ -1,11 +1,20 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
+import org.meerkatdev.andylib.JokeActivity;
+
+import java.lang.ref.WeakReference;
 
 /**
  * Project contains a Java library for supplying jokes.
@@ -61,8 +70,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
+        new AsyncEndpointCompanion(this).execute();
     }
 
+    private static class AsyncEndpointCompanion extends AsyncEndpoint {
+        private WeakReference<MainActivity> activityReference;
+
+        // only retain a weak reference to the activity
+        AsyncEndpointCompanion(MainActivity context) {
+            super(context);
+            activityReference = new WeakReference<>(context);
+        }
+        @Override
+        protected void onPostExecute(String output) {
+            Intent myIntent = new Intent(activityReference.get(), JokeActivity.class);
+            myIntent.putExtra(JokeActivity.ACTION_JOKE, output);
+            activityReference.get().startActivity(myIntent);
+        }
+
+    }
 
 }
